@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THAYMENDES WEB</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font awesome cdn font icon css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <img src="images/LOGO.webp" alt="THAYA GUEDES logo" class="logo-img">
+                    <div class="logo-text">THAY MENDES</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a href="#">MENU</a></li>
+                        <li><a href="https://www.tiktok.com/@thayamisagcy?_t=8oH4rcCRMcI&_r=1">TIKTOK</a></li>
+                        
+                        <li><a href="https://www.instagram.com/thay_amis?igsh=aDhvOGpqM25nZXoz">INSTAGRAM</a></li>
+                        <li><a href="https://wa.me/message/GW5LHAW4TPG5F1">CONTATO</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="container">
+                <div class="hero-pic">
+                    <img src="images/file-mK5XKJKp61vRu2mB7R7dZiv5.webp" alt="profile pic">
+                </div>
+                <div class="hero-text">
+                    <h5>BEM VINDO A <span class="input">Thay</span></h5>
+                    <h1>Thay Mendes</h1>
+                    <p>
+                        Thay Mendes é Streamer e dona da Amis Agency, uma agência de Streamers de Lives em aplicativos como Tiktok, Kwai, Bigo, Pó Live, Kiyo e outros. Se deseja ser um streamer de sucesso, venha para a Amis. Amis Agency faz divulgações e desenvolvimento de marcas e marketing pessoal. Se você deseja ter um bom engajamento e aumentar seu público, entre em contato conosco.
+                    </p>
+                    
+                    <div class="btn-group">
+                        <audio id="boas-vindas-audio" src="seja bem vinda.mp3"></audio>
+                        <a href="#" class="btn active" id="play-audio">AUDIO DE BOAS VINDAS</a>
+                    </div>
+                    
+                    <div class="social">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/thay_amis?igsh=aDhvOGpqM25nZXoz"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---typed js for typing text effect-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+    <script>
+        /** creating button click show hide navbar **/
+        var togglebtn = document.querySelector(".togglebtn");
+        var nav = document.querySelector(".navlinks");
+        var links = document.querySelector(".navlinks li");
+
+        togglebtn.addEventListener("click", function(){
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        });
+
+        var typed = new Typed(".input", {
+            strings: ["TIKTOK @THAYAMISAGCY"],
+            typeSpeed: 150, // Ajuste a velocidade de digitação
+            backSpeed: 800, // Ajuste a velocidade de apagamento
+            backDelay: 1000, // Tempo de espera antes de apagar o texto
+            startDelay: 500, // Tempo de espera antes de começar a digitar
+            loop: true // Se verdadeiro, o texto vai se repetir em loop
+        });
+
+        // Play audio on button click
+        document.getElementById('play-audio').addEventListener('click', function(event) {
+            event.preventDefault();
+            var audio = document.getElementById('boas-vindas-audio');
+            audio.play();
+        });
+    </script>
+</body>
+</html>
